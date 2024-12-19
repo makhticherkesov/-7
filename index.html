@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список лекарств</title>
+</head>
+<body>
+    <h1>Список лекарств</h1>
+    <table border="1">
+        <tr>
+            <th>Номер по порядку</th>
+            <th>Название лекарства</th>
+            <th>Стоимость</th>
+            <th>Статус</th>
+        </tr>
+        {% for medicine in medicines %}
+        <tr>
+            <td>{{ medicine[0] }}</td>
+            <td>{{ medicine[1] }}</td>
+            <td>{{ medicine[2] }}</td>
+            <td>{{ medicine[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
